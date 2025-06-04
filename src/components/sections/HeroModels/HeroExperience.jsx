@@ -1,16 +1,20 @@
 import { OrbitControls } from "@react-three/drei"; // Import OrbitControls for camera interaction
 import { Canvas } from "@react-three/fiber"; // Import Canvas to create a 3D scene
-import React from "react"; // Import React
+import { useMediaQuery } from "react-responsive";
+// 3d model
+import { Room } from "./Room";
 
 const HeroExperience = () => {
   // Define the HeroExperience functional component
-  const isTablet = false; // Set a flag for tablet detection (currently always false)
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
       {/* Create a 3D canvas with camera position and field of view */}
       <ambientLight intensity={0.2} color="#1a1a40" />{" "}
       {/* Add ambient light with low intensity and a blueish color */}
-      <directionalLight position={[5, 5, 5]} intensity={5} />{" "}
+      <directionalLight position={[5, 5, 5]} intensity={2} />{" "}
       {/* Add a strong directional light from the top-right */}
       <OrbitControls
         enablePan={false} // Disable panning the camera
@@ -20,14 +24,13 @@ const HeroExperience = () => {
         minPolarAngle={Math.PI / 5} // Limit how far up the camera can look
         maxPolarAngle={Math.PI / 2} // Limit how far down the camera can look
       />
-      <mesh>
-        {" "}
-        {/* Create a 3D object (mesh) */}
-        <boxGeometry args={[1, 1, 1]} />{" "}
-        {/* Use a box geometry with size 1x1x1 */}
-        <meshStandardMaterial color="teal" />{" "}
-        {/* Apply a teal-colored standard material */}
-      </mesh>
+      <group
+        scale={isMobile ? 0.7 : 1}
+        position={[0, -3.5, 0]}
+        rotation={[0, -Math.PI / 4, 0]}
+      >
+        <Room />
+      </group>
     </Canvas>
   );
 };
