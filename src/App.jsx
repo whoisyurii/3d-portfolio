@@ -1,12 +1,12 @@
 import React from "react";
 import Hero from "./components/Hero";
-import ShowCaseSection from "./sections/ShowCaseSection";
+import ShowcaseSection from "./sections/ShowcaseSection";
 
 const App = () => {
   return (
     <div>
       <Hero />
-      <ShowCaseSection />
+      <ShowcaseSection />
     </div>
   );
 };

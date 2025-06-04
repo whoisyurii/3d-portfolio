@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger); // register gsap plugin, otherwise won't know that you want to apply some scroll features
 
-const ShowCaseSection = () => {
+const ShowcaseSection = () => {
   // create references to each of the projects
   const sectionRef = useRef(null);
   const project1Ref = useRef(null);
@@ -43,7 +43,7 @@ const ShowCaseSection = () => {
 
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
-      <di className="w-full">
+      <div className="w-full">
         <div
           className="showcaselayout" // row on PC and column on mob
         >
@@ -53,7 +53,7 @@ const ShowCaseSection = () => {
               <img src="/images/project1.png" alt="App image" />
             </div>
             <div className="text-content">
-              <h2>Here's my first project title example</h2>
+              <h2>First project title example</h2>
               <p className="text-white-50 md:text-xl">
                 A website build with example example example technologies
               </p>
@@ -62,23 +62,16 @@ const ShowCaseSection = () => {
 
           {/* Right side -- secondary showcases */}
           {/* first */}
-          <div
-            className="project-list-wrapper overflow-hidden"
-            ref={project2Ref}
-          >
-            <div className="project">
+          <div className="project-list-wrapper overflow-hidden">
+            <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#ffefdb]">
                 <img src="/images/project2.png" alt="App image two" />
               </div>
-              <h2>Here's my secondary project title</h2>
+              <h2>My secondary project title</h2>
             </div>
-          </div>
-          {/* second */}
-          <div
-            className="project-list-wrapper overflow-hidden"
-            ref={project3Ref}
-          >
-            <div className="project">
+            {/* second */}
+
+            <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7db]">
                 <img src="/images/project3.png" alt="Startups Now" />
               </div>
@@ -86,9 +79,9 @@ const ShowCaseSection = () => {
             </div>
           </div>
         </div>
-      </di>
+      </div>
     </section>
   );
 };
 
-export default ShowCaseSection;
+export default ShowcaseSection;
