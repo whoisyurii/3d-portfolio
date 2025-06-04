@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 // 3d model
 import { Room } from "./Room";
 import HeroLights from "./HeroLights";
+import Particles from "./Particles";
 
 const HeroExperience = () => {
   // Define the HeroExperience functional component
@@ -22,6 +23,9 @@ const HeroExperience = () => {
         maxPolarAngle={Math.PI / 2} // Limit how far down the camera can look
       />
       <HeroLights />
+      {/* <Particles count={50} 
+      // snowy parts [optional]
+      />  */}
       <group
         scale={isMobile ? 0.7 : 1}
         position={[0, -3.5, 0]}
