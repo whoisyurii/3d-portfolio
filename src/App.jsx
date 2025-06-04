@@ -1,13 +1,14 @@
-import React from "react";
 import Hero from "./components/Hero";
-import ShowcaseSection from "./sections/ShowcaseSection";
+import ShowcaseSection from "./sections/ShowCaseSection";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
-    <div>
+    <>
+      <NavBar />
       <Hero />
       <ShowcaseSection />
-    </div>
+    </>
   );
 };
 
