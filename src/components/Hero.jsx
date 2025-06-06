@@ -1,4 +1,3 @@
-import React from "react";
 import { words } from "../constants";
 import Button from "./Button";
 import HeroExperience from "../sections/HeroModels/HeroExperience";

@@ -122,12 +122,6 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
-  {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
@@ -137,6 +131,12 @@ const techStackIcons = [
     name: "Interactive Developer",
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "AI handler",
+    modelPath: "/models/chatgpt.glb",
+    scale: 140,
     rotation: [0, 0, 0],
   },
   {
@@ -150,35 +150,35 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
-  },
-  {
-    review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+      "Yurii delivered frontend part in a really short time and participated on a backend part of the website. It was a pleasure to work with him.",
+    imgPath: "/images/safeautologo.png",
+    logoPath: "/images/safeauto-import-logo.png",
     title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    date: "April - June 2025",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed and maintained user-facing features for the SafeAuto website.",
+      "Collaborated closely with UI/UX designer to ensure seamless user experiences.",
+      "Optimized website for maximum speed and scalability.",
     ],
   },
   {
     review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
+      "Building pet projects, improving my skills every day. No excuses, no weekends, just constant grinding.",
+    imgPath: "/images/jslogo.png",
+    logoPath: "/images/jsicon.png",
+    title: "Full Stack Developer",
+    date: "Always",
+    responsibilities: [
+      "Building apps with React & React Native, Next.js, Expo, Node.js, Three.js",
+      "Diving deep into new technologies on a constant basis.",
+      "Building network, looking for same-mind friends.",
+    ],
+  },
+  {
+    review:
+      "Started with Python course on Udemy. Failed. Started again with HTML, CSS, JavaScript courses. Still moving forward.",
+    imgPath: "/images/udemylogo.png",
+    logoPath: "/images/udemyicon.png",
     title: "React Native Developer",
     date: "March 2019 - May 2020",
     responsibilities: [
@@ -206,65 +206,61 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "John Doe",
+    mentions: "@doejohn",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "This space is reserved for future legends. Maybe your feedback will be the one that inspires others to join the adventure!",
     imgPath: "/images/client1.png",
   },
   {
     name: "Wade Warren",
     mentions: "@wadewarren",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "No epic stories to share yet, but every pro starts somewhere. Your project could be the one that fills this spot with something legendary!",
     imgPath: "/images/client3.png",
   },
   {
     name: "Guy Hawkins",
     mentions: "@guyhawkins",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "This testimonial is currently under construction—just like my career! Want to help me build it? Let's work together and make some history.",
     imgPath: "/images/client2.png",
   },
   {
     name: "Marvin McKinney",
     mentions: "@marvinmckinney",
     review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+      "Still collecting stories worth sharing. Yours could be the first headline here—let’s create something awesome together!",
     imgPath: "/images/client5.png",
   },
   {
     name: "Floyd Miles",
     mentions: "@floydmiles",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+      "No reviews yet, but every journey starts with a single step (or client). Ready to be the first to leave your mark?",
     imgPath: "/images/client4.png",
   },
   {
     name: "Albert Flores",
     mentions: "@albertflores",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+      "This space is reserved for future legends. Maybe your feedback will be the one that inspires others to join the adventure!",
     imgPath: "/images/client6.png",
   },
 ];
 
 const socialImgs = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "github",
+    imgPath:
+      "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg",
+    link: "https://github.com/whoisyurii",
   },
   {
     name: "linkedin",
-    imgPath: "/images/linkedin.png",
+    imgPath:
+      "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg",
+    link: "https://linkedin.com/in/yurii-mashchuk/",
   },
 ];
 
