@@ -1,29 +1,33 @@
+// Hero.tsx
+import React, { useEffect, memo } from "react";
 import { words } from "../constants";
 import Button from "./Button";
 import HeroExperience from "../sections/HeroModels/HeroExperience";
-
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import AnimatedCounter from "./AnimatedCounter";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1", // selector to apply on
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2, // stagger is for delay for cascading animation
-        duration: 1,
-        ease: "power2.inOut",
-      }
-    );
-  });
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".hero-text h1",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power2.inOut",
+        }
+      );
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="background image" />
+        <img src="/images/bg.png" alt="background" loading="lazy" />
       </div>
       <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
@@ -39,9 +43,10 @@ const Hero = () => {
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
-                          src={word.imgPath}
+                          src={word.imgPath.replace(".png", ".webp")}
                           alt={word.text}
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                          loading="lazy"
                         />
                         {word.text}
                       </span>
@@ -52,11 +57,10 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-event-none">
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
               Hi, I'm Yurii, a developer based in Ukraine with a passion for
               code.
             </p>
-            {/* Button scroll */}
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
               id="button"
@@ -75,4 +79,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default memo(Hero);
