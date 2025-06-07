@@ -6,12 +6,12 @@ import { useMediaQuery } from "react-responsive";
 import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 
-const cameraProps = { position: [8, 2, 12], fov: 45 };
+const cameraProps = { position: [8, 2, 13], fov: 45 };
 
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const scale = isMobile ? 0.95 : 1;
+  const scale = isMobile ? 1 : 1;
   const yPos = isMobile ? 0 : 0;
   return (
     <Canvas

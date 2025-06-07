@@ -134,7 +134,7 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "AI handler",
+    name: "Enhanced AI User",
     modelPath: "/models/chatgpt.glb",
     scale: 140,
     rotation: [0, 0, 0],
@@ -206,45 +206,45 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "John Doe",
-    mentions: "@doejohn",
+    name: "SafeAuto Import",
+    mentions: "@safeauto.pro",
     review:
-      "This space is reserved for future legends. Maybe your feedback will be the one that inspires others to join the adventure!",
+      "Yurii delivered frontend part in a really short time and participated on a backend part of the website. It was a pleasure to work with him.",
     imgPath: "/images/client1.png",
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
+    name: "Dmytro Stetsun",
+    mentions: "@sketsD",
     review:
-      "No epic stories to share yet, but every pro starts somewhere. Your project could be the one that fills this spot with something legendary!",
-    imgPath: "/images/client3.png",
+      "Yurii is one of those hard workers who actually gets things done. He’s always learning something new and never afraid to take on a challenge. I’ve seen him work late nights just to figure out a tricky bug or finish a project on time. Also, he’s just a good friend—always ready to help, share a laugh, or go for a walk. If you’re thinking about working with him, just do it. You won’t regret it.",
+    imgPath: "/images/sketsD.png",
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Sanne de Haan",
+    mentions: "@waterkanbetter",
     review:
-      "This testimonial is currently under construction—just like my career! Want to help me build it? Let's work together and make some history.",
-    imgPath: "/images/client2.png",
+      "Yurii was an excellent team player, always cooperating well with colleagues and contributing positively to the work environment. Furthermore, his problem-solving skills and ability to handle challenges with a proactive attitude made him a valuable asset to our team.",
+    imgPath: "/images/client3.png",
   },
   {
     name: "Marvin McKinney",
     mentions: "@marvinmckinney",
     review:
-      "Still collecting stories worth sharing. Yours could be the first headline here—let’s create something awesome together!",
-    imgPath: "/images/client5.png",
+      "Still collecting stories worth sharing. Yours could be the first headline here—let’s create something awesome together! If you’re searching for a developer who’s passionate about learning, growing, and turning ideas into reality, you’ve found the right person. I believe every project is a new adventure, and I’m excited to see where the next one leads. Ready to make your mark? Let’s connect and build something memorable!",
+    imgPath: "/images/client4.png",
   },
   {
     name: "Floyd Miles",
     mentions: "@floydmiles",
     review:
       "No reviews yet, but every journey starts with a single step (or client). Ready to be the first to leave your mark?",
-    imgPath: "/images/client4.png",
+    imgPath: "/images/client5.png",
   },
   {
     name: "Albert Flores",
     mentions: "@albertflores",
     review:
-      "This space is reserved for future legends. Maybe your feedback will be the one that inspires others to join the adventure!",
+      "This space is reserved for future legends. Maybe your feedback will be the one that inspires others to join the adventure! If you’re reading this, you’re already part of the story. I’m committed to delivering quality, creativity, and a touch of fun to every project. Let’s turn your vision into something extraordinary and inspire others to join the adventure!",
     imgPath: "/images/client6.png",
   },
 ];

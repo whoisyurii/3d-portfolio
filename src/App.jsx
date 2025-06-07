@@ -8,12 +8,14 @@ import TechStack from "./sections/TechStack";
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import AnimatedCounter from "./components/AnimatedCounter";
 
 const App = () => {
   return (
     <>
       <NavBar />
       <Hero />
+      <AnimatedCounter />
       <ShowcaseSection />
       <LogoSection />
       <FeatureCards />
