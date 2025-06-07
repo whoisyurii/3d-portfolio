@@ -69,7 +69,7 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-transparent">
                 <img src="/images/project2.png" alt="App image two" />
               </div>
-              <h2 className="max-md:text-center">
+              <h2 className="text-center">
                 Startups Now - Entrepreneurs Platform
               </h2>
             </div>
@@ -80,9 +80,7 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-transparent">
                 <img src="/images/project3.png" alt="Startups Now" />
               </div>
-              <h2 className="max-md:text-center">
-                MovieX - Film Search Mobile App
-              </h2>
+              <h2 className="text-center">MovieX - Film Search Mobile App</h2>
             </div>
           </div>
         </div>
