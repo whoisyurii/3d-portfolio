@@ -11,6 +11,12 @@ const cameraProps = { position: [0, 0, 15], fov: 45 };
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const scale = isMobile ? 0.7 : isTablet ? 0.9 : 1;
+  const yPos = isMobile
+    ? -5 // ↓ extra 1.5 units
+    : isTablet
+    ? -4.3 // ↓ extra 0.8 units
+    : -3.5;
 
   return (
     <Canvas
@@ -32,11 +38,7 @@ const HeroExperience = () => {
       />
       <HeroLights />
       <Suspense fallback={null}>
-        <group
-          scale={isMobile ? 0.9 : isTablet ? 1.1 : 1}
-          position={[0, -3.5, 0]}
-          rotation={[0, -Math.PI / 4, 0]}
-        >
+        <group scale={scale} position={[0, yPos, 0]}>
           <Room />
         </group>
       </Suspense>

@@ -98,13 +98,22 @@ section {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
+  /* Hero 3D model styles */
   .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+    @apply xl:w-[70%]  w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0 cursor-grab active:cursor-grabbing pointer-events-none;
   }
+
+  /*  Canvas is the only element that should still react */
+  .hero-3d-layout canvas {
+    pointer-events: auto; /* re-enable clicks/drags here */
+    touch-action: pan-y; /* keep vertical scrolling on touch devices */
+  }
+
   /* sm mobile phones */
   @media (max-width: 767px) {
     .hero-3d-layout {
-      min-height: 200px !important;
+      min-height: 35vh;
+      /* min-height: 200px !important; */
       height: 400px !important;
       top: auto !important;
       bottom: 0% !important;
