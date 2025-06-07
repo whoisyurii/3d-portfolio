@@ -53,9 +53,10 @@ const ShowcaseSection = () => {
               <img src="/images/project1.png" alt="App image" />
             </div>
             <div className="text-content">
-              <h2>SafeAuto Import</h2>
-              <p className="text-white-50 md:text-xl">
-                A website built with Next.js, TypeScript, Tailwind, i18n
+              <h2 className="max-md:text-center">SafeAuto Import</h2>
+              <p className="text-white-50 md:text-xl max-md:text-center">
+                A website built with Next.js, TypeScript, PostgreQL Tailwind,
+                i18n
               </p>
             </div>
           </div>
@@ -65,19 +66,23 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               {/* <div className="image-wrapper bg-[#ffefdb]"> */}
-              <div className="image-wrapper bg-black-50">
+              <div className="image-wrapper bg-transparent">
                 <img src="/images/project2.png" alt="App image two" />
               </div>
-              <h2>Startups Now - Entrepreneurs Platform</h2>
+              <h2 className="max-md:text-center">
+                Startups Now - Entrepreneurs Platform
+              </h2>
             </div>
 
             {/* second */}
             <div className="project" ref={project3Ref}>
               {/* <div className="image-wrapper bg-[#ffe7db]"> */}
-              <div className="image-wrapper bg-black-50">
+              <div className="image-wrapper bg-transparent">
                 <img src="/images/project3.png" alt="Startups Now" />
               </div>
-              <h2>MovieX - Film Search Mobile App</h2>
+              <h2 className="max-md:text-center">
+                MovieX - Film Search Mobile App
+              </h2>
             </div>
           </div>
         </div>

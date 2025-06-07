@@ -5,15 +5,22 @@ import React, { useRef, useEffect, useState, memo } from "react";
 const AnimatedCounter = () => {
   const counterRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+          setHasAnimated(true);
+        }
+      },
       { threshold: 0.3 }
     );
+
     if (counterRef.current) observer.observe(counterRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [hasAnimated]);
 
   return (
     <div id="counter" ref={counterRef} className="padding-x-lg xl:mt-0 mt-32">
@@ -27,7 +34,7 @@ const AnimatedCounter = () => {
               <CountUp
                 suffix={item.suffix}
                 end={item.value}
-                duration={7}
+                duration={3}
                 start={isVisible ? 0 : null}
               />
             </div>

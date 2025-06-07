@@ -3,7 +3,6 @@ import { words } from "../constants";
 import Button from "./Button";
 import HeroExperience from "../sections/HeroModels/HeroExperience";
 import gsap from "gsap";
-// import AnimatedCounter from "./AnimatedCounter";
 
 const Hero = () => {
   useEffect(() => {
@@ -74,7 +73,6 @@ const Hero = () => {
           </div>
         </figure>
       </div>
-      {/* <AnimatedCounter /> */}
     </section>
   );
 };

@@ -13,6 +13,7 @@ const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const scale = isMobile ? 1 : 1;
   const yPos = isMobile ? 0 : 0;
+
   return (
     <Canvas
       camera={cameraProps}

@@ -98,6 +98,7 @@ section {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
+  /* ------------------------------------------------ */
   /* Hero 3D model styles */
   .hero-3d-layout {
     @apply xl:w-[70%]  w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0 cursor-grab active:cursor-grabbing pointer-events-none;
@@ -112,7 +113,7 @@ section {
   /* sm mobile phones */
   @media (max-width: 767px) {
     .hero-3d-layout {
-      min-height: 35vh;
+      min-height: 45vh;
       height: 300px !important;
       top: auto !important;
       bottom: -2rem !important;
@@ -125,8 +126,8 @@ section {
   /* md tablets */
   @media (min-width: 768px) and (max-width: 1023px) {
     .hero-3d-layout {
-      min-height: 35vh;
-      height: 500px !important;
+      min-height: 60vh;
+      height: 400px !important;
       top: auto !important;
       bottom: 0 !important;
       left: 50% !important;
@@ -134,6 +135,21 @@ section {
       transform: translateX(-50%);
     }
   }
+
+  /* md tablets */
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .hero-3d-layout {
+      min-height: 60vh;
+      height: 400px !important;
+      top: auto !important;
+      bottom: -1rem !important;
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%);
+    }
+  }
+
+  /* ------------------------------------------------ */
   .navbar {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 

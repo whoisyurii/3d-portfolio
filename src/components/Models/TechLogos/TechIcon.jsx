@@ -30,9 +30,9 @@ const TechIcon = ({ model }) => {
   return (
     <Canvas
       style={{ width: "100%", height: "100%" }}
-      frameloop="demand" // рендерим только при взаимодействии
-      dpr={[1, 1.5]} // ограничиваем пиксельный ратио
-      shadows={false} // отключаем тени для простоты
+      // frameloop="demand"
+      dpr={[1, 1.5]}
+      shadows={false} // off for optimization
     >
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={1} />

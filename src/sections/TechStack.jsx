@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TechStack = () => {
   useEffect(() => {
-    // Инициализируем GSAP-контекст, чтобы при размонтировании анимация отменялась
+    // gsap context for stop animation on unmount
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".tech-card",
@@ -22,7 +22,7 @@ const TechStack = () => {
           stagger: 0.2,
           scrollTrigger: {
             trigger: "#skills",
-            start: "top 80%", // когда секция чуть ниже верха экрана
+            start: "top 80%",
           },
         }
       );
