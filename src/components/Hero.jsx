@@ -32,7 +32,7 @@ const Hero = () => {
       </div>
       <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-7 max-md:items-center">
             <div className="hero-text">
               <h1>
                 Shaping{" "}
@@ -58,14 +58,14 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none max-md:text-center">
               Hi, I'm Yurii, a developer based in Ukraine with a passion for
               code.
             </p>
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
               id="button"
-              text="See my Work"
+              text="More Details"
             />
           </div>
         </header>

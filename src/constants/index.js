@@ -31,7 +31,7 @@ const words = [
 // to fix
 console.log("fix here in constants");
 const counterItems = [
-  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 12, suffix: "+", label: "Months of Experience" },
   { value: 11, suffix: "+", label: "Satisfied Clients" },
   { value: 21, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },

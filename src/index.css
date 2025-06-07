@@ -114,9 +114,9 @@ section {
     .hero-3d-layout {
       min-height: 35vh;
       /* min-height: 200px !important; */
-      height: 400px !important;
+      height: 300px !important;
       top: auto !important;
-      bottom: 0% !important;
+      bottom: -3rem !important;
       left: 50% !important;
       right: auto !important;
       transform: translateX(-50%);

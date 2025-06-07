@@ -1,23 +1,18 @@
 // HeroExperience.tsx
 import { Suspense, memo } from "react";
-import { OrbitControls } from "@react-three/drei";
+import { Center, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 
-const cameraProps = { position: [0, 0, 15], fov: 45 };
+const cameraProps = { position: [8, 2, 12], fov: 45 };
 
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const scale = isMobile ? 0.7 : isTablet ? 0.9 : 1;
-  const yPos = isMobile
-    ? -5 // ↓ extra 1.5 units
-    : isTablet
-    ? -4.3 // ↓ extra 0.8 units
-    : -3.5;
-
+  const scale = isMobile ? 0.95 : 1;
+  const yPos = isMobile ? 0 : 0;
   return (
     <Canvas
       camera={cameraProps}
@@ -39,7 +34,9 @@ const HeroExperience = () => {
       <HeroLights />
       <Suspense fallback={null}>
         <group scale={scale} position={[0, yPos, 0]}>
-          <Room />
+          <Center>
+            <Room />
+          </Center>
         </group>
       </Suspense>
     </Canvas>
