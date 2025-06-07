@@ -33,7 +33,7 @@ const HeroExperience = () => {
       <HeroLights />
       <Suspense fallback={null}>
         <group
-          scale={isMobile ? 1.1 : isTablet ? 1.2 : 1}
+          scale={isMobile ? 0.9 : isTablet ? 1.1 : 1}
           position={[0, -3.5, 0]}
           rotation={[0, -Math.PI / 4, 0]}
         >
