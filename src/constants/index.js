@@ -31,9 +31,9 @@ const words = [
 // to fix
 console.log("fix here in constants");
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 11, suffix: "+", label: "Satisfied Clients" },
+  { value: 21, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
@@ -150,8 +150,8 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "Yurii delivered frontend part in a really short time and participated on a backend part of the website. It was a pleasure to work with him.",
-    imgPath: "/images/safeautologo.png",
+      '"Yurii delivered frontend part in a really short time and participated on a backend part of the website. It was a pleasure to work with him."',
+    imgPath: "/images/SafeAuto.png",
     logoPath: "/images/safeauto-import-logo.png",
     title: "Full Stack Developer",
     date: "April - June 2025",
@@ -163,28 +163,28 @@ const expCards = [
   },
   {
     review:
-      "Building pet projects, improving my skills every day. No excuses, no weekends, just constant grinding.",
-    imgPath: "/images/jslogo.png",
+      "I become more confident. Building pet projects, improving my skills every day. No excuses, no weekends, just constant grinding.",
+    imgPath: "/images/practice.png",
     logoPath: "/images/jsicon.png",
     title: "Full Stack Developer",
-    date: "Always",
+    date: "July 2024 - Current",
     responsibilities: [
+      "Quit my current non-IT job. Relocated to a different country.",
       "Building apps with React & React Native, Next.js, Expo, Node.js, Three.js",
       "Diving deep into new technologies on a constant basis.",
-      "Building network, looking for same-mind friends.",
     ],
   },
   {
     review:
       "Started with Python course on Udemy. Failed. Started again with HTML, CSS, JavaScript courses. Still moving forward.",
-    imgPath: "/images/udemylogo.png",
+    imgPath: "/images/studies.png",
     logoPath: "/images/udemyicon.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    title: "Self-Driven Studies",
+    date: "December 2023 - Current",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Getting through HTML, CSS, JavaScript courses.",
+      "Going through sleepless study nights and working regular job.",
+      "Building network, looking for same-minded friends.",
     ],
   },
 ];

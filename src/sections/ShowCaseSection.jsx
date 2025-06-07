@@ -53,9 +53,9 @@ const ShowcaseSection = () => {
               <img src="/images/project1.png" alt="App image" />
             </div>
             <div className="text-content">
-              <h2>First project title example</h2>
+              <h2>SafeAuto Import</h2>
               <p className="text-white-50 md:text-xl">
-                A website build with example example example technologies
+                A website built with Next.js, TypeScript, Tailwind, i18n
               </p>
             </div>
           </div>
@@ -64,18 +64,20 @@ const ShowcaseSection = () => {
           {/* first */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
-              <div className="image-wrapper bg-[#ffefdb]">
+              {/* <div className="image-wrapper bg-[#ffefdb]"> */}
+              <div className="image-wrapper bg-black-50">
                 <img src="/images/project2.png" alt="App image two" />
               </div>
-              <h2>My secondary project title</h2>
+              <h2>Startups Now - Entrepreneurs Platform</h2>
             </div>
-            {/* second */}
 
+            {/* second */}
             <div className="project" ref={project3Ref}>
-              <div className="image-wrapper bg-[#ffe7db]">
+              {/* <div className="image-wrapper bg-[#ffe7db]"> */}
+              <div className="image-wrapper bg-black-50">
                 <img src="/images/project3.png" alt="Startups Now" />
               </div>
-              <h2>Startup showcase app</h2>
+              <h2>MovieX - Film Search Mobile App</h2>
             </div>
           </div>
         </div>

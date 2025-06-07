@@ -1,5 +1,5 @@
 // HeroExperience.tsx
-import React, { Suspense, memo } from "react";
+import { Suspense, memo } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
@@ -33,7 +33,7 @@ const HeroExperience = () => {
       <HeroLights />
       <Suspense fallback={null}>
         <group
-          scale={isMobile ? 0.7 : 1}
+          scale={isMobile ? 1.1 : isTablet ? 1.2 : 1}
           position={[0, -3.5, 0]}
           rotation={[0, -Math.PI / 4, 0]}
         >

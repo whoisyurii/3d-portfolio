@@ -18,6 +18,7 @@ const Hero = () => {
           stagger: 0.2,
           duration: 1,
           ease: "power2.inOut",
+          delay: 0.6, // delay to ease first load
         }
       );
     });
@@ -43,7 +44,7 @@ const Hero = () => {
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
-                          src={word.imgPath.replace(".png", ".webp")}
+                          src={word.imgPath}
                           alt={word.text}
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                           loading="lazy"
