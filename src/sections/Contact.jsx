@@ -77,7 +77,7 @@ const Contact = () => {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="Where should I send my reply? (no spam, promise!)"
+                    placeholder="Drop your email"
                     required
                   />
                 </div>

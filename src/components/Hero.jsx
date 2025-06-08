@@ -16,7 +16,7 @@ const Hero = () => {
           stagger: 0.2,
           duration: 1,
           ease: "power2.inOut",
-          delay: 0.6, // delay to ease first load
+          delay: 0.65, // delay to ease first load
         }
       );
     });
@@ -36,9 +36,9 @@ const Hero = () => {
                 Shaping{" "}
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map((word) => (
+                    {words.map((word, idx) => (
                       <span
-                        key={word.text}
+                        key={word.text + idx}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img

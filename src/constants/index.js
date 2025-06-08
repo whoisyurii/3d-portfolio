@@ -16,8 +16,7 @@ const navLinks = [
     link: "#testimonials",
   },
 ];
-// to fix
-console.log("fix here in constants > index.js");
+
 const words = [
   { text: "Ideas", imgPath: "/images/ideas.svg" },
   { text: "Concepts", imgPath: "/images/concepts.svg" },
@@ -28,8 +27,7 @@ const words = [
   { text: "Designs", imgPath: "/images/designs.svg" },
   { text: "Code", imgPath: "/images/code.svg" },
 ];
-// to fix
-console.log("fix here in constants");
+
 const counterItems = [
   { value: 12, suffix: "+", label: "Months of Experience" },
   { value: 11, suffix: "+", label: "Satisfied Clients" },

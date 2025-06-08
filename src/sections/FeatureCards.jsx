@@ -4,9 +4,9 @@ const FeatureCards = () => {
   return (
     <div className="w-full padding-x-lg">
       <div className="mx-auto grid-3-cols">
-        {abilities.map(({ imgPath, title, desc }) => (
+        {abilities.map(({ imgPath, title, desc, idx }) => (
           <div
-            key={title}
+            key={title + idx}
             className="card-border rounded-xl p-8 flex flex-col gap-4"
           >
             <div className="size-14 flex items-center justify-center rounded-full">
