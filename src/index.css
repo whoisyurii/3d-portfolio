@@ -81,7 +81,7 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    @apply relative z-10 xl:mt-20 mt-26 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
   }
 
   .hero-text {
@@ -116,7 +116,7 @@ section {
       min-height: 45vh;
       height: 300px !important;
       top: auto !important;
-      bottom: 0rem !important;
+      bottom: -1rem !important;
       left: 50% !important;
       right: auto !important;
       transform: translateX(-50%);
@@ -368,6 +368,10 @@ section {
         filter: brightness(0) invert(1);
       }
     }
+  }
+
+  .hero-anim {
+    will-change: transform, opacity;
   }
 }
 

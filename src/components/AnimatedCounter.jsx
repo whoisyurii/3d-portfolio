@@ -26,7 +26,7 @@ const AnimatedCounter = () => {
     <div
       id="counter"
       ref={counterRef}
-      className="padding-x-lg xl:mt-0 max-md:mt-4"
+      className="padding-x-lg xl:mt-0 max-md:mt-12"
     >
       <div className="mx-auto grid-4-cols">
         {counterItems.map((item) => (

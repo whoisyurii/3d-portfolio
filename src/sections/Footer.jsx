@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
-          <p>So, am I hired?</p>
+          <p>Wow, you made it all the way to the footer!</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Yurii Mashchuk. All rights reserved.
+            © {new Date().getFullYear()} Made with ❤️ by Yurii Mashchuk.
           </p>
         </div>
       </div>

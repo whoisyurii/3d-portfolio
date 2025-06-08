@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 12, suffix: "+", label: "Months of Experience" },
-  { value: 11, suffix: "+", label: "Satisfied Clients" },
-  { value: 21, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 12, suffix: "+", label: "Months of Coding" },
+  { value: 9, suffix: "+", label: "Projects Completed" },
+  { value: 6, suffix: "+", label: "Courses Completed" },
+  { value: 100, suffix: "%", label: "Motivation to Learn" },
 ];
 
 const logoIconsList = [
@@ -164,7 +164,7 @@ const expCards = [
       "I become more confident. Building pet projects, improving my skills every day. No excuses, no weekends, just constant grinding.",
     imgPath: "/images/practice.png",
     logoPath: "/images/jsicon.png",
-    title: "Full Stack Developer",
+    title: "Practice",
     date: "July 2024 - Current",
     responsibilities: [
       "Quit my current non-IT job. Relocated to a different country.",
@@ -177,7 +177,7 @@ const expCards = [
       "Started with Python course on Udemy. Failed. Started again with HTML, CSS, JavaScript courses. Still moving forward.",
     imgPath: "/images/studies.png",
     logoPath: "/images/udemyicon.png",
-    title: "Self-Driven Studies",
+    title: "Studies",
     date: "December 2023 - Current",
     responsibilities: [
       "Getting through HTML, CSS, JavaScript courses.",
