@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, Suspense, memo } from "react";
+import React, { useEffect, useMemo, Suspense, memo, useState } from "react";
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
@@ -27,26 +27,42 @@ const TechIcon = ({ model }) => {
     [model.scale, model.rotation]
   );
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+
+  // Флаг: анимировать только если есть hover/touch/focus
+  const shouldAnimate = isHovered || isFocused;
+
   return (
     <Canvas
       style={{ width: "100%", height: "100%" }}
-      // frameloop="demand"
+      frameloop={shouldAnimate ? "always" : "demand"}
       dpr={[1, 1.5]}
-      shadows={false} // off for optimization
+      shadows={false}
+      onPointerEnter={() => setIsHovered(true)} // cursor focus
+      onPointerLeave={() => setIsHovered(false)}
+      onPointerDown={() => setIsFocused(true)} // touchscreens focus
+      onPointerUp={() => setIsFocused(false)}
+      onBlur={() => setIsFocused(false)}
+      tabIndex={0} // keyboard focus
     >
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <Environment preset="city" />
-
-      <OrbitControls
-        enableZoom={false}
-        makeDefault
-        enableDamping
-        dampingFactor={0.1}
-      />
-
+      {shouldAnimate && (
+        <OrbitControls
+          enableZoom={false}
+          makeDefault
+          enableDamping
+          dampingFactor={0.1}
+        />
+      )}
       <Suspense fallback={null}>
-        <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
+        <Float
+          speed={shouldAnimate ? 5.5 : 0}
+          rotationIntensity={shouldAnimate ? 0.5 : 0}
+          floatIntensity={shouldAnimate ? 0.9 : 0}
+        >
           <group {...groupProps}>
             <primitive object={scene} />
           </group>

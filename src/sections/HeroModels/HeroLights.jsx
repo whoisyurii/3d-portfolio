@@ -4,7 +4,7 @@ const HeroLights = () => {
   return (
     <>
       <spotLight
-        position={[2, 5, 6]}
+        position={[5, 5, 2]}
         angle={0.15}
         intensity={100}
         penumbra={0.2}
@@ -18,10 +18,10 @@ const HeroLights = () => {
         color="#4cc9f0"
       />
       <spotLight
-        position={[-3, 5, 5]}
+        position={[-1, 6, 2]}
         angle={0.4}
         intensity={60}
-        penumbra={1}
+        penumbra={0.5}
         color="#9d4edd"
       />
 
@@ -33,7 +33,7 @@ const HeroLights = () => {
       />
 
       <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
-      <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
+      <pointLight position={[-1.5, -2, -2]} intensity={10} color="#0d00a4" />
     </>
   );
 };
