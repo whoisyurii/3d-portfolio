@@ -1,4 +1,4 @@
-import { useState, memo, Suspense } from "react";
+import { useState, memo, Suspense, useEffect } from "react";
 import { words } from "../constants";
 import Button from "./Button";
 import HeroExperience from "../sections/HeroModels/HeroExperience";
@@ -8,6 +8,16 @@ import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
   const [show3D, setShow3D] = useState(false);
+  const [idle, setIdle] = useState(false);
+
+  // Отложенный старт 3D через requestIdleCallback
+  useEffect(() => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(() => setIdle(true));
+    } else {
+      setTimeout(() => setIdle(true), 400);
+    }
+  }, []);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -19,7 +29,7 @@ const Hero = () => {
         stagger: { each: 0.33, from: "end" }, // animate from last to first
         duration: 1,
         ease: "power2.inOut",
-        delay: 0.5,
+        delay: 0.6,
         onComplete: () => setShow3D(true),
       }
     );
@@ -29,7 +39,7 @@ const Hero = () => {
     <section id="hero" className="relative overflow-hidden">
       {/* bg pic */}
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
+        <img src="/images/bg.png" alt="Background Image" loading="eager" />
       </div>
 
       <div className="hero-layout">
@@ -79,7 +89,7 @@ const Hero = () => {
 
         <figure>
           <div className="hero-3d-layout">
-            {show3D ? (
+            {idle && show3D ? (
               <Suspense fallback={<HeroSkeleton />}>
                 <HeroExperience />
               </Suspense>
