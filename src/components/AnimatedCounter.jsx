@@ -15,7 +15,7 @@ const AnimatedCounter = () => {
           setHasAnimated(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.05 }
     );
 
     if (counterRef.current) observer.observe(counterRef.current);
@@ -26,7 +26,7 @@ const AnimatedCounter = () => {
     <div
       id="counter"
       ref={counterRef}
-      className="padding-x-lg xl:mt-0 max-md:mt-12"
+      className="padding-x-lg xl:mt-0 max-md:mt-22"
     >
       <div className="mx-auto grid-4-cols">
         {counterItems.map((item) => (

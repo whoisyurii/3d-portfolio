@@ -116,7 +116,7 @@ section {
       min-height: 45vh;
       height: 300px !important;
       top: auto !important;
-      bottom: -1rem !important;
+      bottom: -1.5rem !important;
       left: 50% !important;
       right: auto !important;
       transform: translateX(-50%);
@@ -203,7 +203,7 @@ section {
   }
 
   .app-showcase {
-    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
+    @apply w-full md:mt-20 max-md:mt-12 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 
     .showcaselayout {
       @apply flex xl:flex-row flex-col gap-10 justify-between;

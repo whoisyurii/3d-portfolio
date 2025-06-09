@@ -2,6 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger); // register gsap plugin, otherwise won't know that you want to apply some scroll features
 
@@ -44,8 +45,12 @@ const ShowcaseSection = () => {
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
+        <TitleHeader
+          title="My Commercial & Pet Projects"
+          sub="⚒️ Showcase of My Touch "
+        />
         <div
-          className="showcaselayout" // row on PC and column on mob
+          className="showcaselayout mt-16 md:mt-22" // row on PC and column on mob
         >
           {/* Left side -- primary showcase */}
           <div className="first-project-wrapper" ref={project1Ref}>
@@ -65,8 +70,8 @@ const ShowcaseSection = () => {
           {/* first */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
-              {/* <div className="image-wrapper bg-[#ffefdb]"> */}
-              <div className="image-wrapper bg-transparent">
+              <div className="image-wrapper bg-[#1d54a6]">
+                {/* <div className="image-wrapper bg-transparent"> */}
                 <img src="/images/project2.png" alt="App image two" />
               </div>
               <h2 className="text-center">
@@ -76,8 +81,8 @@ const ShowcaseSection = () => {
 
             {/* second */}
             <div className="project" ref={project3Ref}>
-              {/* <div className="image-wrapper bg-[#ffe7db]"> */}
-              <div className="image-wrapper bg-transparent">
+              <div className="image-wrapper bg-[#a273ff]">
+                {/* <div className="image-wrapper bg-transparent"> */}
                 <img src="/images/project3.png" alt="Startups Now" />
               </div>
               <h2 className="text-center">MovieX - Film Search Mobile App</h2>
