@@ -2,37 +2,17 @@ import { useState, memo, Suspense, useEffect } from "react";
 import { words } from "../constants";
 import Button from "./Button";
 import HeroExperience from "../sections/HeroModels/HeroExperience";
-import gsap from "gsap";
 import { HeroSkeleton } from "../sections/HeroModels/HeroSkeleton";
-import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
-  const [show3D, setShow3D] = useState(false);
   const [idle, setIdle] = useState(false);
 
-  // Отложенный старт 3D через requestIdleCallback
   useEffect(() => {
     if ("requestIdleCallback" in window) {
       window.requestIdleCallback(() => setIdle(true));
     } else {
-      setTimeout(() => setIdle(true), 400);
+      setTimeout(() => setIdle(true), 500);
     }
-  }, []);
-
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      { y: -50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: { each: 0.33, from: "end" }, // animate from last to first
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 0.6,
-        onComplete: () => setShow3D(true),
-      }
-    );
   }, []);
 
   return (
@@ -47,12 +27,9 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <h1>
+              <h1 className="fadein-text">
                 Shaping{" "}
-                <span
-                  className="slide"
-                  //  style={{ animationDelay: "1s" }}
-                >
+                <span className="slide">
                   <span className="wrapper">
                     {words.map((word, idx) => (
                       <span
@@ -71,12 +48,11 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1 className="fadein-text">into Real Projects</h1>
+              <h1 className="fadein-text">that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I'm Yurii, a developer based in Ukraine with a passion for
-              code.
+              Hi, I'm Yurii, a Ukrainian web-developer with a passion for code.
             </p>
 
             <Button
@@ -89,13 +65,9 @@ const Hero = () => {
 
         <figure>
           <div className="hero-3d-layout">
-            {idle && show3D ? (
-              <Suspense fallback={<HeroSkeleton />}>
-                <HeroExperience />
-              </Suspense>
-            ) : (
-              <HeroSkeleton />
-            )}
+            <Suspense fallback={<HeroSkeleton />}>
+              {idle ? <HeroExperience /> : <HeroSkeleton />}
+            </Suspense>
           </div>
         </figure>
       </div>

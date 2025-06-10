@@ -211,20 +211,6 @@ const testimonials = [
     imgPath: "/images/client1.png",
   },
   {
-    name: "Dmytro Stetsun",
-    mentions: "@sketsD",
-    review:
-      "Yurii is one of those hard workers who actually gets things done. He’s always learning something new and never afraid to take on a challenge. I’ve seen him work late nights just to figure out a tricky bug or finish a project on time. Also, he’s just a good friend—always ready to help, share a laugh, or go for a walk. If you’re thinking about working with him, just do it. You won’t regret it.",
-    imgPath: "/images/sketsD.png",
-  },
-  {
-    name: "Sanne de Haan",
-    mentions: "@waterkanbetter",
-    review:
-      "Yurii was an excellent team player, always cooperating well with colleagues and contributing positively to the work environment. Furthermore, his problem-solving skills and ability to handle challenges with a proactive attitude made him a valuable asset to our team.",
-    imgPath: "/images/client3.png",
-  },
-  {
     name: "Marvin McKinney",
     mentions: "@marvinmckinney",
     review:
@@ -232,11 +218,25 @@ const testimonials = [
     imgPath: "/images/client4.png",
   },
   {
+    name: "Dmytro Stetsun",
+    mentions: "@sketsD",
+    review:
+      "Yurii is one of those hard workers who actually gets things done. He’s always learning something new and never afraid to take on a challenge. I’ve seen him work late nights just to figure out a tricky bug or finish a project on time. Also, he’s just a good friend—always ready to help, share a laugh, or go for a walk. If you’re thinking about working with him, just do it. You won’t regret it.",
+    imgPath: "/images/sketsD.png",
+  },
+  {
     name: "Floyd Miles",
     mentions: "@floydmiles",
     review:
       "No reviews yet, but every journey starts with a single step (or client). Ready to be the first to leave your mark?",
     imgPath: "/images/client5.png",
+  },
+  {
+    name: "Sanne de Haan",
+    mentions: "@waterkanbetter",
+    review:
+      "Yurii was an excellent team player, always cooperating well with colleagues and contributing positively to the work environment. Furthermore, his problem-solving skills and ability to handle challenges with a proactive attitude made him a valuable asset to our team.",
+    imgPath: "/images/client3.png",
   },
   {
     name: "Albert Flores",

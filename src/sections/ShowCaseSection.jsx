@@ -18,7 +18,7 @@ const ShowcaseSection = () => {
       project1Ref.current,
       project2Ref.current,
       project3Ref.current,
-    ]; // The .current property is where React stores the actual DOM node (or value) after the component renders. To access the real DOM node (for GSAP, focus, measurements, etc.), you must use .current.
+    ]; // The .current property is where React stores the actual DOM node (or value) after the component renders. To access the real DOM node (for GSAP, focus, measurements, etc.)
     projects.forEach((card, index) => {
       gsap.fromTo(
         card,
@@ -55,12 +55,16 @@ const ShowcaseSection = () => {
           {/* Left side -- primary showcase */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="App image" />
+              <img src="/images/project1.png" alt="SafeAuto Project Image" />
             </div>
             <div className="text-content">
-              <h2 className="max-md:text-center">SafeAuto Import</h2>
+              <h2 className="max-md:text-center ">
+                <a href="https://safeauto.pro/ua" className="hover:underline">
+                  SafeAuto Import &#8599;
+                </a>
+              </h2>
               <p className="text-white-50 md:text-xl max-md:text-center">
-                A website built with Next.js, TypeScript, PostgreQL Tailwind,
+                A website built with Next.js, TypeScript, PostgreSQL Tailwind,
                 i18n
               </p>
             </div>
@@ -72,10 +76,15 @@ const ShowcaseSection = () => {
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#1d54a6]">
                 {/* <div className="image-wrapper bg-transparent"> */}
-                <img src="/images/project2.png" alt="App image two" />
+                <img src="/images/project2.png" alt="Startups Now App Image" />
               </div>
               <h2 className="text-center">
-                Startups Now - Entrepreneurs Platform
+                <a
+                  href="https://startups-now.vercel.app"
+                  className="hover:underline"
+                >
+                  Startups Now - Entrepreneurs Platform &#8599;
+                </a>
               </h2>
             </div>
 
@@ -83,9 +92,12 @@ const ShowcaseSection = () => {
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#a273ff]">
                 {/* <div className="image-wrapper bg-transparent"> */}
-                <img src="/images/project3.png" alt="Startups Now" />
+                <img
+                  src="/images/project3.png"
+                  alt="MovieX Movie Search Mobile App"
+                />
               </div>
-              <h2 className="text-center">MovieX - Film Search Mobile App</h2>
+              <h2 className="text-center">MovieX - Movie Search Mobile App</h2>
             </div>
           </div>
         </div>
