@@ -55,7 +55,7 @@ const ShowcaseSection = () => {
           {/* Left side -- primary showcase */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="SafeAuto Project Image" />
+              <img src="/images/project1.webp" alt="SafeAuto Project Image" loading="lazy" />
             </div>
             <div className="text-content">
               <h2 className="max-md:text-center ">
@@ -76,7 +76,7 @@ const ShowcaseSection = () => {
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#1d54a6]">
                 {/* <div className="image-wrapper bg-transparent"> */}
-                <img src="/images/project2.png" alt="Startups Now App Image" />
+                <img src="/images/project2.png" alt="Startups Now App Image" loading="lazy" />
               </div>
               <h2 className="text-center">
                 <a
@@ -95,6 +95,7 @@ const ShowcaseSection = () => {
                 <img
                   src="/images/project3.png"
                   alt="MovieX Movie Search Mobile App"
+                  loading="lazy"
                 />
               </div>
               <h2 className="text-center">MovieX - Movie Search Mobile App</h2>
