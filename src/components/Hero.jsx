@@ -1,17 +1,21 @@
-import { useState, memo, Suspense, useEffect } from "react";
+import React, { useState, memo, Suspense, useEffect, lazy } from "react";
 import { words } from "../constants";
 import Button from "./Button";
-import HeroExperience from "../sections/HeroModels/HeroExperience";
+// import HeroExperience from "../sections/HeroModels/HeroExperience";
 import { HeroSkeleton } from "../sections/HeroModels/HeroSkeleton";
 
 const Hero = () => {
-  const [idle, setIdle] = useState(false);
+  const [LazyHeroExperience, setLazyHeroExperience] = useState(null);
 
   useEffect(() => {
+    const loadWhenIdle = () => {
+      const Comp = lazy(() => import("../sections/HeroModels/HeroExperience"));
+      setLazyHeroExperience(() => Comp);
+    };
     if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(() => setIdle(true));
+      window.requestIdleCallback(loadWhenIdle);
     } else {
-      setTimeout(() => setIdle(true), 500);
+      setTimeout(loadWhenIdle, 500);
     }
   }, []);
 
@@ -66,7 +70,7 @@ const Hero = () => {
         <figure>
           <div className="hero-3d-layout">
             <Suspense fallback={<HeroSkeleton />}>
-              {idle ? <HeroExperience /> : <HeroSkeleton />}
+              {LazyHeroExperience ? <LazyHeroExperience /> : <HeroSkeleton />}
             </Suspense>
           </div>
         </figure>
