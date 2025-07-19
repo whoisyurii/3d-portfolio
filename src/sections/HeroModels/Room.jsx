@@ -174,4 +174,5 @@ export function Room(props) {
   );
 }
 
-useGLTF.preload("/models/optimized-room.glb");
+// useGLTF.preload("/models/optimized-room.glb"); 
+// comment out for performance
