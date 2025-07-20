@@ -9,7 +9,7 @@ import HeroLights from "./HeroLights";
 const cameraProps = { position: [8, 2, 13], fov: 45 };
 
 const HeroExperience = () => {
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  // const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const scale = isMobile ? 1 : 1;
   const yPos = isMobile ? 0 : 0;
@@ -24,7 +24,10 @@ const HeroExperience = () => {
       <OrbitControls
         makeDefault
         enablePan={false}
-        enableZoom={!isTablet}
+        enableZoom={false}
+        enableRotate={false}
+        autoRotate={true}
+        autoRotateSpeed={0.2}
         maxDistance={20}
         minDistance={5}
         minPolarAngle={Math.PI / 5}
