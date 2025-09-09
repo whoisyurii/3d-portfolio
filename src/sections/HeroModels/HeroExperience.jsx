@@ -20,7 +20,6 @@ const HeroExperience = () => {
       frameloop="demand"
       dpr={[1, 1.5]}
       shadows={false}
-      style={{ pointerEvents: "none" }}
     >
       <OrbitControls
         makeDefault
