@@ -101,12 +101,12 @@ section {
   /* ------------------------------------------------ */
   /* Hero 3D model styles */
   .hero-3d-layout {
-    @apply xl:w-[70%]  w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0 cursor-grab active:cursor-grabbing pointer-events-none;
+    @apply xl:w-[70%]  w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
   }
 
   /*  Canvas is the only element that should still react */
   .hero-3d-layout canvas {
-    pointer-events: auto; /* re-enable clicks/drags here */
+    pointer-events: none; /* re-enable clicks/drags here */
     touch-action: pan-y; /* keep vertical scrolling on touch devices */
   }
 
